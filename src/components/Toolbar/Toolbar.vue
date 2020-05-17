@@ -3,10 +3,10 @@
     <img src="../../assets/brand.png" alt />
     <div class="nav-actions">
       <div class="searchbar-container">
-        <div class="search-categories">
+        <button>
           <h5>All</h5>
-          <font-awesome-icon icon="angle-down" />
-        </div>
+          <font-awesome-icon icon="angle-down" style="font-size:13px;"/>
+        </button>
         <input type="text" placeholder="Search for goods" />
         <div class="search-icon-container">
           <font-awesome-icon icon="search" style="color: #d4d2da;"/>
@@ -15,6 +15,7 @@
       <div class="navoptions-container">
         <a href="#" target="_blank" rel="noopener noreferrer">Orders</a>
         <a href="#" target="_blank" rel="noopener noreferrer">Cart</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">Login</a>
       </div>
     </div>
   </nav>
@@ -32,7 +33,7 @@ export default {
 <style>
 nav {
   display: flex;
-  padding: 10px;
+  padding: 10px 70px;
 }
 
 nav img {
@@ -42,7 +43,7 @@ nav img {
 .nav-actions {
   display: flex;
   width: 100%;
-  margin: 0px 70px;
+  margin-left: 50px;
 }
 
 .searchbar-container {
@@ -51,7 +52,7 @@ nav img {
   align-items: center;
 }
 
-.search-categories {
+.searchbar-container button {
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -63,9 +64,17 @@ nav img {
   border: 1px solid #d4d2da;
 }
 
-.search-categories h5 {
+.searchbar-container button h5 {
   font-weight: normal;
   margin-right: 5px;
+}
+
+.searchbar-container button:focus{
+  outline: 0;
+}
+
+.searchbar-container button:hover{
+  background-color: #e2e0e6;
 }
 
 .searchbar-container input {

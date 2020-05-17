@@ -2,18 +2,21 @@
   <div id="app">
     <Toolbar />
     <Home />
+    <Footer/>
   </div>
 </template>
 
 <script>
 import Home from "./components/Home/Home.vue";
 import Toolbar from "./components/Toolbar/Toolbar.vue";
+import Footer from "./components/Footer/Footer.vue";
 
 export default {
   name: "App",
   components: {
+    Toolbar,
     Home,
-    Toolbar
+    Footer
   }
 };
 </script>

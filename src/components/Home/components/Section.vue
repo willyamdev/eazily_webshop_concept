@@ -15,7 +15,7 @@
 
       <div class="section-itens-container" ref="sections-itens-container">
         <div class="section-item" v-for="(item, index) in sectionItems" :key="index">
-          <img :src="item.backgroundImage" alt />
+          <img :src="item.backgroundImage" alt="" v-if="sectionType == true" />
           <h2>{{ item.categoryName }}</h2>
         </div>
       </div>
@@ -31,6 +31,7 @@ export default {
   components: { FontAwesomeIcon },
   props: {
     sectionName: {},
+    sectionType: { type: Boolean },
     sectionItems: { type: Array }
   },
   methods: {
@@ -50,6 +51,10 @@ export default {
 </script>
 
 <style>
+.section {
+  margin-bottom: 80px;
+}
+
 .section-header {
   display: flex;
   align-items: center;
@@ -112,7 +117,7 @@ export default {
   align-items: center;
   width: 360px;
   height: 230px;
-  background-color: blue;
+  background-color: gray;
   transition: 0.5s;
   cursor: pointer;
 }

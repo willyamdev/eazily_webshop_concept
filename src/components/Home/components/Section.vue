@@ -1,18 +1,23 @@
 <template>
   <div class="section">
-    <h1>{{ sectionName }}</h1>
-    <div class="section-itens-container">
+    <div class="section-header">
+      <h1>{{ sectionName }}</h1>
+      <a href="#">View all</a>
+    </div>
 
-      <div class="arrow left">
+    <div class="section-container">
+      <button class="arrow left" @click="leftClick()">
         <font-awesome-icon icon="angle-left" class="icon-arrow" />
-      </div>
-      <div class="arrow right">
+      </button>
+      <button class="arrow right" @click="rightClick()">
         <font-awesome-icon icon="angle-right" class="icon-arrow" />
-      </div>
+      </button>
 
-      <div class="section-item" v-for="(item, index) in sectionItems" :key="index">
-        <img :src="item.backgroundImage" alt />
-        <h2>{{ item.categoryName }}</h2>
+      <div class="section-itens-container" ref="sections-itens-container">
+        <div class="section-item" v-for="(item, index) in sectionItems" :key="index">
+          <img :src="item.backgroundImage" alt />
+          <h2>{{ item.categoryName }}</h2>
+        </div>
       </div>
     </div>
   </div>
@@ -27,12 +32,41 @@ export default {
   props: {
     sectionName: {},
     sectionItems: { type: Array }
+  },
+  methods: {
+    rightClick() {
+      let element = this.$refs["sections-itens-container"];
+      let maxScroll = element.scrollWidth;
+      if (element.scrollLeft >= maxScroll) return;
+      element.scrollLeft = element.scrollLeft + 360;
+    },
+    leftClick() {
+      let element = this.$refs["sections-itens-container"];
+      if (element.scrollLeft <= 0) return;
+      element.scrollLeft = element.scrollLeft - 360;
+    }
   }
 };
 </script>
 
 <style>
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-header a {
+  text-decoration: none;
+  color: #5144c0;
+}
+
+.section-container {
+  position: relative;
+}
+
 .section-itens-container {
+  scroll-behavior: smooth;
   position: relative;
   overflow: hidden;
   margin-top: 20px;
@@ -41,7 +75,9 @@ export default {
   width: 100%;
 }
 
-.arrow{
+.arrow {
+  background: none;
+  border: none;
   position: absolute;
   z-index: 3;
   top: 0;
@@ -51,11 +87,15 @@ export default {
   cursor: pointer;
 }
 
-.left{
+.arrow:focus {
+  outline: 0;
+}
+
+.left {
   left: 20px;
 }
 
-.right{
+.right {
   right: 20px;
 }
 

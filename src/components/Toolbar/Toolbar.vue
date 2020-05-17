@@ -58,7 +58,7 @@ nav img {
   justify-content: center;
   align-items: center;
   background-color: #e7e5eb;
-  height: 40px;
+  height: 42px;
   width: 70px;
   border-radius: 6px 0px 0px 6px;
   border: 1px solid #d4d2da;

@@ -1,6 +1,9 @@
 import bg01 from '../../assets/categories-background/bg-category-01.png';
 import bg02 from '../../assets/categories-background/bg-category-02.png';
 import bg03 from '../../assets/categories-background/bg-category-03.png';
+import bg04 from '../../assets/categories-background/bg-category-04.png';
+import bg05 from '../../assets/categories-background/bg-category-05.png';
+import bg06 from '../../assets/categories-background/bg-category-06.png';
 
 export const categoriesList = [
     {
@@ -17,14 +20,14 @@ export const categoriesList = [
     },
     {
         categoryName:"Eletronics",
-        backgroundImage:bg03
+        backgroundImage:bg04
     },
     {
         categoryName:"Autos",
-        backgroundImage:bg03
+        backgroundImage:bg05
     },
     {
         categoryName:"Autos",
-        backgroundImage:bg03
+        backgroundImage:bg06
     }
 ];

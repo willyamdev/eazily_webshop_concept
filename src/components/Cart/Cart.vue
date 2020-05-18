@@ -9,19 +9,28 @@
           <h5>QUANTITY</h5>
           <h5>TOTAL</h5>
         </div>
+
         <div class="cart-item">
-          <div class="product-container">
-            IMAGE
-          </div>
+          <div class="product-container">IMAGE</div>
           <div class="price-container">
             <h4>$20</h4>
           </div>
           <div class="quantity-container">
-            
-            
-
+            <div class="quantity-item">
+              <button>
+                <font-awesome-icon icon="minus" />
+              </button>
+              <h4>1</h4>
+              <button>
+                <font-awesome-icon icon="plus" />
+              </button>
+            </div>
+          </div>
+          <div class="total-container">
+            <h4>$20</h4>
           </div>
         </div>
+        
       </div>
       <div class="order-sumary">syary</div>
     </div>
@@ -29,8 +38,13 @@
 </template>
 
 <script>
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+
 export default {
-  name: "Cart"
+  name: "Cart",
+  components: {
+    FontAwesomeIcon
+  }
 };
 </script>
 
@@ -55,7 +69,7 @@ export default {
 
 .items-title {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 0.5fr;
+  grid-template-columns: 1fr 0.6fr 0.6fr 0.5fr;
   width: 90%;
 
   border-width: 0px 0px 1px 0px;
@@ -73,7 +87,32 @@ export default {
   margin: 10px 0px;
   display: flex;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 0.5fr;
+  grid-template-columns: 1fr 0.6fr 0.6fr 0.5fr;
   width: 90%;
+}
+
+.quantity-item {
+  display: flex;
+  align-items: center;
+  width: min-content;
+  border: 1px solid #d4d2da;
+  border-radius: 5px;
+}
+
+.quantity-item button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+}
+
+.quantity-item button:focus {
+  outline: 0;
+}
+
+.quantity-item h4 {
+  width: 25px;
+  text-align: center;
 }
 </style>

@@ -13,9 +13,9 @@
         </div>
       </div>
       <div class="navoptions-container">
-        <a href="#" target="_blank" rel="noopener noreferrer">Orders</a>
-        <a href="#" target="_blank" rel="noopener noreferrer">Cart</a>
-        <a href="#" target="_blank" rel="noopener noreferrer">Login</a>
+        <router-link to="/">Orders</router-link>
+        <router-link to="/cart">Cart</router-link>
+        <router-link to="/">Login</router-link>
       </div>
     </div>
   </nav>

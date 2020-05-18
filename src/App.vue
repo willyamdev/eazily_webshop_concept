@@ -1,22 +1,20 @@
 <template>
   <div id="app">
     <Toolbar />
-    <Home />
-    <Footer/>
+    <router-view></router-view>
+    <!-- <Footer/> -->
   </div>
 </template>
 
 <script>
-import Home from "./components/Home/Home.vue";
 import Toolbar from "./components/Toolbar/Toolbar.vue";
-import Footer from "./components/Footer/Footer.vue";
+// import Footer from "./components/Footer/Footer.vue";
 
 export default {
   name: "App",
   components: {
     Toolbar,
-    Home,
-    Footer
+    // Footer
   }
 };
 </script>

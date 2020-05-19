@@ -11,11 +11,17 @@
         </div>
 
         <div class="cart-item">
-          <div class="product-container">IMAGE</div>
-          <div class="price-container">
+          <div class="product-container">
+            <div class="imageicon"></div>
+            <div class="product-info">
+              <p>Mono Clock</p>
+              <h5>ID: 891419424</h5>
+            </div>
+          </div>
+          <div class="price-container align-items-to-center">
             <h4>$20</h4>
           </div>
-          <div class="quantity-container">
+          <div class="quantity-container align-items-to-center">
             <div class="quantity-item">
               <button>
                 <font-awesome-icon icon="minus" />
@@ -26,11 +32,10 @@
               </button>
             </div>
           </div>
-          <div class="total-container">
+          <div class="total-container align-items-to-center">
             <h4>$20</h4>
           </div>
         </div>
-        
       </div>
       <div class="order-sumary">syary</div>
     </div>
@@ -84,11 +89,38 @@ export default {
 }
 
 .cart-item {
-  margin: 10px 0px;
+  padding: 10px 0px;
   display: flex;
   display: grid;
   grid-template-columns: 1fr 0.6fr 0.6fr 0.5fr;
   width: 90%;
+
+  border-width: 0px 0px 1px 0px;
+  border-color: #868686;
+  border-style: solid;
+}
+
+.product-container {
+  display: flex;
+}
+
+.product-container .imageicon {
+  background-color: red;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+.product-container .product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.align-items-to-center {
+  display: flex;
+  align-items: center;
 }
 
 .quantity-item {

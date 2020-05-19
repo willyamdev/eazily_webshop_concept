@@ -34,6 +34,7 @@ export default {
 nav {
   display: flex;
   padding: 10px 70px;
+  margin-bottom: 40px;
 }
 
 nav img {

@@ -3,7 +3,7 @@ import iphoneImage02 from './assets/products/iphone_8_plus/iphone_8_plus_front.p
 import iphoneImage03 from './assets/products/iphone_8_plus/iphone_8_plus_back.png'
 import iphoneImage04 from './assets/products/iphone_8_plus/iphone_8_plus_side.png'
 
-export const categoriesList = [
+export const productsList = [
     {
         produto: "Iphone 8 Plus",
         sku: "2024711194343",

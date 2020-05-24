@@ -15,7 +15,13 @@
 
       <div class="section-itens-container" ref="sections-itens-container">
         <div class="section-item" v-for="(item, index) in sectionItems" :key="index">
-          <img :src="item.backgroundImage" alt="" v-if="sectionType == true" />
+          <div class="image-div" v-if="sectionType == true">
+            <img :src="item.backgroundImage" alt />
+          </div>
+          <div v-else class="image-div">
+            <img :src="item.image01" alt />
+          </div>
+
           <h2>{{ item.categoryName }}</h2>
         </div>
       </div>
@@ -123,11 +129,19 @@ export default {
 }
 
 .section-item h2 {
-  z-index: 2;
+  z-index: 3;
   color: white;
 }
 
 .section-item img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  position: absolute;
+}
+
+.image-div {
   width: 100%;
   height: 100%;
   z-index: 1;
